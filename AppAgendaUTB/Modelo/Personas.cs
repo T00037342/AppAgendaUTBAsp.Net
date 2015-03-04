@@ -56,50 +56,50 @@ namespace AppAgendaUTB
         #endregion
 
         #region "Costructores"
-        public Personas():base()
+        public Personas(string id, string nombres, string apellidos, string emailP, string emailW, string telefonoP, string telefonoW)
         {
-            this.id = "T000XXXXX" ;
-            this.nombre = "Nombre";
-            this.apellido = "Apellido";
-            this.emailP = "XXXXX@DOMINIO.NET";
-            this.emailW = "XXXXX@DOMINIO.NET";
-            this.telefonoP = "XXXXXXXXXX";
-            this.telefonoW = "XXXXXXXXXx";
+            this.id = id;
+            this.nombre = nombres;
+            this.apellido = apellidos;
+            this.emailP = emailP;
+            this.emailW = emailW;
+            this.telefonoP = telefonoP;
+            this.telefonoW = telefonoW;
         }
         #endregion
 
         #region "Metodos Sobre Escritos"
         public override string ToString()
         {
-            return base.ToString() +
-                "Id:"+this.id +
-                "Nombre: " + this.nombre +
-                "Apellido:" +this.apellido+
-                "Email:"+this.emailW+
-                "Email:" + this.emailP+
-                "Telefono:"+ this.telefonoP+
-                "Telefono:"+this.telefonoW;
-
-        }
-        public override bool Equals(object obj)
-        {
-            Personas c = (Personas)obj;
-            bool result = false;
-            if (base.Equals(c) &&
-               (this.id == c.id)&&
-               (this.nombre == c.nombre)&&
-               (this.apellido == c.apellido)&&
-               (this.telefonoP == c.telefonoP)&&
-               (this.telefonoW == c.telefonoW)&&
-               (this.emailP == c.emailP)&&
-               (this.emailW == c.emailW));
-               
-            result = true;
-            return result;
+            return "\n_______________________________________" +
+            "\nIdentificacion: " + this.id +
+            "\nNombres: " + this.nombre +
+            "\nApellidos: " + this.apellido +
+            "\nEmail P: " + this.emailP +
+            "\nEmail W: " + this.emailW +
+            "\nTelefono P: " + this.telefonoP +
+            "\nTelefono W: " + this.telefonoW +
+            "\n_______________________________________";
         }
         public override int GetHashCode()
         {
             return this.ToString().GetHashCode();
+        }
+        public override bool Equals(object obj)
+        {
+            Personas o = (Personas)obj;
+            bool result = false;
+            if ((this.id == o.id) &&
+                (this.nombre == o.nombre) &&
+                (this.apellido == o.apellido) &&
+                (this.emailP == o.emailP) &&
+                (this.emailW == o.emailW) &&
+                (this.telefonoP == o.telefonoP) &&
+                (this.telefonoW == o.telefonoW))
+           
+                result = true;
+
+            return result;
         }
         #endregion
     }
