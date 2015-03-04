@@ -76,7 +76,9 @@ namespace AppAgendaUTB
                 "Nombre: " + this.nombre +
                 "Apellido:" +this.apellido+
                 "Email:"+this.emailW+
-                "Email:" + this.emailP;
+                "Email:" + this.emailP+
+                "Telefono:"+ this.telefonoP+
+                "Telefono:"+this.telefonoW;
 
         }
         public override bool Equals(object obj)

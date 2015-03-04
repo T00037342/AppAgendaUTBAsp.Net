@@ -12,6 +12,11 @@ namespace AppAgendaUTB.Datos
         {
             Personas p1 = new Personas();
             Personas p2 = new Personas();
+
+            data.Add(p1);
+            data.Add(p2);
+
+            return data;
         }
     }
 }
